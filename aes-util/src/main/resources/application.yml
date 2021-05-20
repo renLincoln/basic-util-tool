@@ -1,0 +1,44 @@
+spring:
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    # mysql 配置实例
+#    username: sdgt
+#    password: sdgt2020#
+#    url: jdbc:p6spy:mysql://172.17.47.205:3306/sdgt?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+
+    # oracle 配置实例 test
+#    username: kcbs
+#    password: zjkc_2012_PT
+#    url: jdbc:oracle:thin:@//192.168.2.171:1521/kcpt
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+    # oracle 配置实例 prod
+    username: kcbs
+    password: g57rQUqINNanDR8u
+    url: jdbc:oracle:thin:@//192.168.111.45:1521/RACDB
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    # 使用P6SpyDriver还存在问题
+#    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#  jpa:
+#    show-sql: true
+
+### 开启日志打印
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    default-statement-timeout: 1
+#  ## 配置逻辑删除
+#  global-config:
+#    db-config:
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+#      logic-delete-field: delFlag
+
+aes:
+  key: asekeysinoiov
+
+
+server:
+  port: 8877
+  servlet:
+    context-path: /
