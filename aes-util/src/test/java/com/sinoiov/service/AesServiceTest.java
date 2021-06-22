@@ -125,7 +125,8 @@ public class AesServiceTest {
                 // 从数据库中获取数据信息
                 QueryWrapper qw = new QueryWrapper();
                 qw.select(fieldDTO.getKeyField() + "," +
-                        fieldDTO.getAnnoField().stream().collect(Collectors.joining(",")));
+                        fieldDTO.getAnnoField().stream().collect(Collectors.joining(",")))
+                        .orderByDesc(fieldDTO.getKeyField());
                 Page objectPage = new Page<>(currentPage, pageSize);
                 IPage page = iService.page(objectPage, qw);
                 // 获取查询到的数据集合
